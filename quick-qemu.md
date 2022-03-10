@@ -19,6 +19,8 @@ cd qemu-$qemu_ver
 make -j$(($(nproc) - 1))
 sudo make install
 
+cd ..
+
 # Delete all files after installed
 rm -R qemu-$qemu_ver
 ```
