@@ -5,3 +5,5 @@ Copy & past and step by step.
 ## [Environment Linux](quick-environment-linux.md)
 
 ## [Qemu](quick-qemu.md)
+
+## [Yocto](quick-yocto.md)

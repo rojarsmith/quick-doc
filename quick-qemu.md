@@ -1,6 +1,6 @@
 # Quick Qemu
 
-
+## Install
 
 ```bash
 # Remove apt package if existed
@@ -23,5 +23,13 @@ cd ..
 
 # Delete all files after installed
 rm -R qemu-$qemu_ver
+```
+
+## Command
+
+```bash
+qemu-system-arm -M vexpress-a9 -m 256 -kernel u-boot -nographic
+
+# hit “Ctrl-a” and then “x” to exit QEMU
 ```
 

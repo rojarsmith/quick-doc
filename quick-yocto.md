@@ -55,3 +55,26 @@ bitbake core-image-minimal
 qemu-system-arm -M qemuarm -smp 1 -m 256 -kernel tmp/deploy/images/raspberrypi3/uImage -dtb tmp/deploy/images/raspberrypi3/bcm2710-rpi-3-b-plus.dtb -drive file=tmp/deploy/images/raspberrypi3/core-image-minimal-raspberrypi3.ext3,if=sd,format=raw -append "console=ttyAMA0,115200 root=/dev/mmcblk0" -serial stdio -net nic,model=lan9118 -net user
 ```
 
+## WIC
+
+.wks
+
+example
+
+```bash
+part /opt --source rootfs --rootfs-dir=${IMAGE_ROOTFS}/opt --ondisk sda --fstype=ext4 --label opt --align 8192
+part /mnt/p3 --fixed-size 100M --ondisk mmcblk0 --fstype=ext4 --label storage --align 131072 --use-uuid
+sudo mount -t ext4 /dev/mmcblk0p3 p3
+```
+
+example IMX
+
+```bash
+part u-boot --source rawcopy --sourceparams="file=imx-boot" --ondisk sda --no-table --align ${IMX_BOOT_SEEK}
+part /boot --source bootimg-partition --ondisk sda --fstype=vfat --label boot --active --align 8192 --size 64
+part / --source rootfs --ondisk sda --fstype=ext4 --label root --exclude-path=home/ --exclude-path=opt/ --align 8192
+part /home --source rootfs --rootfs-dir=${IMAGE_ROOTFS}/home --ondisk sda --fstype=ext4 --label home --align 8192
+part /opt --source rootfs --rootfs-dir=${IMAGE_ROOTFS}/opt --ondisk sda --fstype=ext4 --label opt --align 8192
+bootloader --ptable msdos
+```
+
