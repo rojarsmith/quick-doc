@@ -7,3 +7,5 @@ Copy & past and step by step.
 ## [Qemu](quick-qemu.md)
 
 ## [Yocto](quick-yocto.md)
+
+## [Buildroot](quick-buildroot.md)
