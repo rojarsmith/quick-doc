@@ -90,6 +90,10 @@ vi ../meta-rauc/recipes-support/rauc-hawkbit-updater/files/do.sh
 
 ```bash
 remote 1
+
+# or
+
+local 1
 ```
 
 vi ../meta-rauc/recipes-support/rauc-hawkbit-updater/files/config.conf
@@ -241,7 +245,7 @@ rm ~/.ssh/known_hosts
 # Keep qemu running
 scp -P 2222 tmp/deploy/images/qemux86-64/qemu-demo-bundle-qemux86-64.raucb root@localhost:/data/
 
-cp tmp/deploy/images/qemux86-64/qemu-demo-bundle-qemux86-64.raucb qemu-demo-bundle-qemux86-64-remote1.raucb
+cp tmp/deploy/images/qemux86-64/qemu-demo-bundle-qemux86-64.raucb qemu-demo-bundle-qemux86-64-remote-1.raucb
 
 ## In device
 
