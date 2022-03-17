@@ -9,3 +9,7 @@ Copy & past and step by step.
 ## [Yocto](quick-yocto.md)
 
 ## [Buildroot](quick-buildroot.md)
+
+## [Compile linux kernal](quick-compile-linux-kernal.md)
+
+## [MSYS2](quick-msys2.md)

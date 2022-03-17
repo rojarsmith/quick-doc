@@ -247,6 +247,8 @@ scp -P 2222 tmp/deploy/images/qemux86-64/qemu-demo-bundle-qemux86-64.raucb root@
 
 cp tmp/deploy/images/qemux86-64/qemu-demo-bundle-qemux86-64.raucb qemu-demo-bundle-qemux86-64-remote-1.raucb
 
+cp tmp/deploy/images/qemux86-64/qemu-demo-bundle-qemux86-64.raucb qemu-demo-bundle-qemux86-64-local-1.raucb
+
 ## In device
 
 rauc install /data/qemu-demo-bundle-qemux86-64.raucb
