@@ -1,7 +1,5 @@
 # Quick Msys2
 
-
-
 ```bash
 # Update the package database and base packages.
 pacman -Syu
@@ -11,5 +9,8 @@ pacman -Su
 
 # mingw-w64 GCC
 pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+
+# jq, a lightweight and flexible command-line JSON processor.
+pacman -S mingw-w64-x86_64-jq
 ```
 
